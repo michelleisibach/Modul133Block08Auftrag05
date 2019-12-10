@@ -159,6 +159,4 @@ describe("Data structures", () => {
             expect(result).to.equal(2);
         })
     })
-
-    
 })
