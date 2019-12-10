@@ -1,7 +1,6 @@
 import { expect } from "chai";
 import { Queue } from "../lib/Queue";
 import { Stack } from "../lib/Stack";
-import { DataStructure, DataStructures } from "../lib/DataStructe";
 
 describe("Data structures", () => {
     describe("Queue", () => {
@@ -161,17 +160,5 @@ describe("Data structures", () => {
         })
     })
 
-    describe("Creation", () => {
-        it("Queue creation", () => {
-            const structureType = DataStructures.Queue;
-            const result = DataStructure.create<number>(structureType);
-            expect(result).to.be.an.instanceOf(Queue);
-        })
-
-        it("Stack creation", () => {
-            const structureType = DataStructures.Stack;
-            const result = DataStructure.create<number>(structureType);
-            expect(result).to.be.an.instanceOf(Stack);
-        })
-    })
+    
 })
