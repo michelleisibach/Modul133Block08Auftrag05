@@ -5,56 +5,45 @@ import { DataStructure, DataStructures } from "../lib/DataStructe";
 
 describe("Data structures", () => {
     describe("Queue", () => {
-        it("empty queue has zero size", () => {
-            const testee = DataStructure.create<number>(DataStructures.Queue);
-
+        it("Empty Queue, Size 0", () => {
+            const testee = new Queue<number>();
             const result = testee.size();
-
             expect(result).to.equal(0);
         })
 
-        it("non-empty queue returns false isEmpty", () => {
-            const testee = DataStructure.create<number>(DataStructures.Queue);
-
+        it("unempty queue returns isEmpty=false", () => {
+            const testee = new Queue<number>();
             testee.enqueue(15);
             const result = testee.isEmpty();
-
             expect(result).to.be.false;
         })
 
-        it("empty queue returns true isEmpty", () => {
-            const testee = DataStructure.create<number>(DataStructures.Queue);
-
+        it("empty queue returns isEmpty=true", () => {
+            const testee = new Queue<number>();
             const result = testee.isEmpty();
-
             expect(result).to.be.true;
         })
 
         it("enqueue item increases size", () => {
-            const testee = DataStructure.create<number>(DataStructures.Queue);
-
+            const testee = new Queue<number>();;
             testee.enqueue(11);
             testee.enqueue(22);
             testee.enqueue(33);
             const result = testee.size();
-
             expect(result).to.equal(3);
         })
 
         it("peek item returns first added value", () => {
-            const testee = DataStructure.create<number>(DataStructures.Queue);
-
+            const testee = new Queue<number>();
             testee.enqueue(11);
             testee.enqueue(22);
             testee.enqueue(33);
             const result = testee.peek();
-
             expect(result).to.equal(11);
         })
 
         it("peek item returns does not affect size", () => {
-            const testee = DataStructure.create<number>(DataStructures.Queue);
-
+            const testee = new Queue<number>();
             testee.enqueue(11);
             testee.enqueue(22);
             testee.enqueue(33);
@@ -65,7 +54,7 @@ describe("Data structures", () => {
         })
 
         it("poll item returns first added value", () => {
-            const testee = DataStructure.create<number>(DataStructures.Queue);
+            const testee = new Queue<number>();
 
             testee.enqueue(11);
             testee.enqueue(22);
@@ -76,7 +65,7 @@ describe("Data structures", () => {
         })
 
         it("poll item returns does affect size", () => {
-            const testee = DataStructure.create<number>(DataStructures.Queue);
+            const testee = new Queue<number>();
 
             testee.enqueue(11);
             testee.enqueue(22);
@@ -90,7 +79,7 @@ describe("Data structures", () => {
 
     describe("Stack", () => {
         it("empty stack has zero size", () => {
-            const testee = DataStructure.create<number>(DataStructures.Stack);
+            const testee = new Stack<number>();
 
             const result = testee.size();
 
@@ -98,7 +87,7 @@ describe("Data structures", () => {
         })
 
         it("non-empty stack returns false isEmpty", () => {
-            const testee = DataStructure.create<number>(DataStructures.Stack);
+            const testee = new Stack<number>();
 
             testee.enqueue(15);
             const result = testee.isEmpty();
@@ -107,7 +96,7 @@ describe("Data structures", () => {
         })
 
         it("empty stack returns true isEmpty", () => {
-            const testee = DataStructure.create<number>(DataStructures.Stack);
+            const testee = new Stack<number>();
 
             const result = testee.isEmpty();
 
@@ -115,7 +104,7 @@ describe("Data structures", () => {
         })
 
         it("enqueue item increases size", () => {
-            const testee = DataStructure.create<number>(DataStructures.Stack);
+            const testee = new Stack<number>();
 
             testee.enqueue(11);
             testee.enqueue(22);
@@ -126,7 +115,7 @@ describe("Data structures", () => {
         })
 
         it("peek item returns last added value", () => {
-            const testee = DataStructure.create<number>(DataStructures.Stack);
+            const testee = new Stack<number>();
 
             testee.enqueue(11);
             testee.enqueue(22);
@@ -137,7 +126,7 @@ describe("Data structures", () => {
         })
 
         it("peek item returns doesnt affect size", () => {
-            const testee = DataStructure.create<number>(DataStructures.Stack);
+            const testee = new Stack<number>();
 
             testee.enqueue(11);
             testee.enqueue(22);
@@ -149,7 +138,7 @@ describe("Data structures", () => {
         })
 
         it("poll item returns last added value", () => {
-            const testee = DataStructure.create<number>(DataStructures.Stack);
+            const testee = new Stack<number>();
 
             testee.enqueue(11);
             testee.enqueue(22);
@@ -160,7 +149,7 @@ describe("Data structures", () => {
         })
 
         it("poll item returns affects size", () => {
-            const testee = DataStructure.create<number>(DataStructures.Stack);
+            const testee = new Stack<number>();
 
             testee.enqueue(11);
             testee.enqueue(22);
